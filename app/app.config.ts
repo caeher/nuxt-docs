@@ -27,7 +27,12 @@ export default defineAppConfig({
     links: [{
       'icon': 'i-lucide-code-xml',
       'to': '/tokenization-api',
-      'aria-label': 'API Reference'
+      'aria-label': 'API Docs'
+    }, {
+      'icon': 'i-lucide-book-open',
+      'to': '/api-reference',
+      'aria-label': 'API Reference',
+      'label': 'API Reference'
     }]
   },
   footer: {

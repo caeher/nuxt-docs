@@ -32,6 +32,11 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-07-11',
 
+  routeRules: {
+    '/api-reference': { ssr: false },
+    '/api-reference/**': { ssr: false }
+  },
+
   nitro: {
     prerender: {
       routes: [
@@ -69,13 +74,6 @@ export default defineNuxtConfig({
         contentCollection: 'docs',
         contentFilters: [
           { field: 'path', operator: 'LIKE', value: '/getting-started%' }
-        ]
-      },
-      {
-        title: 'Essentials',
-        contentCollection: 'docs',
-        contentFilters: [
-          { field: 'path', operator: 'LIKE', value: '/essentials%' }
         ]
       },
       {
