@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tokenization API Reference</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { 
+        margin: 0; 
+        padding: 0; 
+        transition: background-color 0.2s ease;
+      }
+      
+      /* Dark mode */
+      html.dark body {
+        background-color: #0f172a; /* slate-900 */
+        color-scheme: dark;
+      }
+      
+      /* Light mode */
+      html.light body {
+        background-color: #ffffff;
+        color-scheme: light;
+      }
+
+      /* Custom tweaks to match Nuxt UI theme */
+      .scalar-app {
+        --theme-color-1: #3b82f6 !important; /* blue-500 */
+        --theme-color-2: #60a5fa !important; /* blue-400 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. The mount point for Scalar -->
+    <script id="api-reference"></script>
+
+    <!-- 2. Advanced configuration -->
+    <script>
+      document.getElementById('api-reference').dataset.configuration = JSON.stringify({
+        spec: { url: '/openapi.json' },
+        theme: 'kepler',
+        hideDarkModeToggle: true,
+        metaData: { title: 'Tokenization API Reference' }
+      });
+    </script>
+
+    <!-- 3. Include the script to render the UI -->
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+
+    <!-- 3. Theme synchronization script -->
+    <script>
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        
+        // 1. Update HTML tag for native scrollbars and custom CSS
+        document.documentElement.classList.remove('dark', 'light');
+        document.documentElement.classList.add(isDark ? 'dark' : 'light');
+        
+        // 2. Update Body tag with Scalar's internal classes
+        document.body.classList.remove('dark-mode', 'light-mode');
+        document.body.classList.add(isDark ? 'dark-mode' : 'light-mode');
+      }
+
+      // Listen for theme changes from parent window
+      window.addEventListener('message', (event) => {
+        if (event.data && event.data.theme) {
+          applyTheme(event.data.theme);
+        }
+      });
+      
+      // Infer initial theme from localStorage just in case, default to dark
+      const isDarkLocal = localStorage.getItem('nuxt-color-mode') !== 'light';
+      applyTheme(isDarkLocal ? 'dark' : 'light');
+    </script>
+  </body>
+</html>
