@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Nuxt Docs Template
-  description: Create stunning, fast and SEO-optimized documentation sites with Nuxt UI.
+  title: Developer Portal | Tokenization Ecosystem
+  description: Plataforma integral para la digitalización de activos reales (RWA) sobre Bitcoin y Liquid.
 ---
 
 ::u-page-hero{class="dark:bg-gradient-to-b from-neutral-900 to-neutral-950"}
@@ -12,103 +12,87 @@ orientation: horizontal
 :hero-background
 
 #title
-Ship Beautiful [Documentation]{.text-primary}.
+Tokeniza el Mundo Real en [Bitcoin]{.text-primary}.
 
 #description
-Build professional documentation with Nuxt UI's powerful components, enhanced typography, and seamless Nuxt Content integration. The same system trusted by the entire [Nuxt ecosystem](https://nuxt.com).
+Documentación técnica, guías y referencia API para construir la próxima generación de finanzas descentralizadas sobre Bitcoin y Liquid Network.
 
 #links
   :::u-button
   ---
-  to: /getting-started
+  to: /tokenization-api
   size: xl
   trailing-icon: i-lucide-arrow-right
   ---
-  Get started
+  Explorar API
   :::
 
   :::u-button
   ---
-  icon: i-simple-icons-github
+  icon: i-lucide-book-open
   color: neutral
   variant: outline
   size: xl
-  to: https://github.com/nuxt-ui-templates/docs
-  target: _blank
+  to: /tokenization-api/tokenization
   ---
-  Use this template
+  Guía de Tokenización
   :::
 
 #default
   :::prose-pre
   ---
   code: |
-    export default defineNuxtConfig({
-      modules: [
-        '@nuxt/ui',
-        '@nuxt/content',
-        'nuxt-og-image',
-        'nuxt-llms'
-      ],
-
-      css: ['~/assets/css/main.css']
-    })
-  filename: nuxt.config.ts
+    curl -X POST https://api.ecosystem.com/assets/upload \
+      -H "Authorization: Bearer <token>" \
+      -F "file=@property.pdf" \
+      -F "category=real_estate"
+  filename: Ingesta de Activos
   ---
 
-  ```ts [nuxt.config.ts]
-  export default defineNuxtConfig({
-    modules: [
-      '@nuxt/ui',
-      '@nuxt/content',
-      'nuxt-og-image',
-      'nuxt-llms'
-    ],
-
-    css: ['~/assets/css/main.css']
-  })
+  ```bash
+  curl -X POST https://api.ecosystem.com/assets/upload \
+    -H "Authorization: Bearer <token>" \
+    -F "file=@property.pdf" \
+    -F "category=real_estate"
   ```
   :::
 ::
 
 ::u-page-section{class="dark:bg-neutral-950"}
 #title
-Powered by Nuxt UI components
+Diseñado para la Economía del Futuro
 
 #links
   :::u-button
   ---
   color: neutral
   size: lg
-  target: _blank
-  to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
+  to: /tokenization-api/auth
   trailingIcon: i-lucide-arrow-right
   variant: subtle
   ---
-  Explore Nuxt UI
+  Empieza con Auth
   :::
 
 #features
   :::u-page-feature
   ---
-  icon: i-lucide-palette
+  icon: i-lucide-coins
   ---
   #title
-  100+ UI Components
-
+  RWA Digitalization
   #description
-  Access the complete Nuxt UI component library. From badges to modals, everything styled and accessible out of the box.
+  Convierte propiedades, facturas o arte en activos digitales con validez legal y técnica inmediata.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-type
+  icon: i-lucide-brain
   ---
   #title
-  Beautiful Typography
-
+  AI Underwriting
   #description
-  Pre-styled prose components with perfect visual harmony. No need for @tailwindcss/typography - get precise control over every element.
+  Modelos de IA integrados que evalúan automáticamente el riesgo y la valoración de los activos subidos.
   :::
 
   :::u-page-feature
@@ -116,128 +100,87 @@ Powered by Nuxt UI components
   icon: i-lucide-layers
   ---
   #title
-  Rich Prose Components
-
+  Liquid Network
   #description
-  Accordions, cards, callouts, tabs, steps, code blocks, and more - all provided by Nuxt UI for interactive documentation.
+  Emisión nativa en la sidechain líder de Bitcoin, con transacciones confidenciales y liquidación en segundos para activos digitales.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-search
+  icon: i-lucide-shopping-cart
   ---
   #title
-  Built-in Search
-
+  Atomic Marketplace
   #description
-  Full-text search with ContentSearch component. No need for Algolia - instant, relevant results with keyboard shortcuts (⌘K).
+  Motor de intercambio P2P con escrows atómicos. Sin riesgo de contraparte, garantizado por código.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-navigation
+  icon: i-lucide-radio
   ---
   #title
-  Smart Navigation
-
+  Nostr Integration
   #description
-  Auto-generated navigation with ContentNavigation and ContentToc components. Sticky table of contents and prev/next links.
+  Descubrimiento de ofertas y reputación social sobre el protocolo Nostr. Global, abierto y resistente a la censura.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-moon
+  icon: i-lucide-shield-check
   ---
   #title
-  Dark Mode Ready
-
+  MPC & 2FA Security
   #description
-  Automatic theme switching with smooth transitions. Respects system preferences and remembers user choice.
+  Custodia de grado institucional combinada con autorización de usuario vía TOTP para cada movimiento de fondos.
   :::
 ::
 
 ::u-page-section{class="dark:bg-neutral-950"}
 #title
-Enhanced with Nuxt Content
+Arquitectura Robusta de Microservicios
 
 #links
   :::u-button
   ---
   color: neutral
   size: lg
-  target: _blank
-  to: https://content.nuxt.com/docs/getting-started/installation
+  to: /tokenization-api
   trailingIcon: i-lucide-arrow-right
   variant: subtle
   ---
-  Explore Nuxt Content
+  Ver Ecosistema
   :::
 
 #features
   :::u-page-feature
   ---
-  icon: i-simple-icons-markdown
+  icon: i-lucide-key
   ---
   #title
-  MDC Enhanced Markdown
-
+  Auth & Identity
   #description
-  Write in Markdown while embedding Vue components. Seamlessly integrate interactive elements in your content.
+  Gestión de identidades KYC, sesiones seguras y API Keys para desarrolladores externos.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-file-text
+  icon: i-lucide-wallet
   ---
   #title
-  File-based Routing
-
+  Wallet Orchestrator
   #description
-  Organize content in folders and files. Your documentation structure automatically becomes your navigation.
+  Gestión transparente de UTXOs, Lightning Network y balances multiactivo.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-code
+  icon: i-lucide-landmark
   ---
   #title
-  Syntax Highlighting
-
+  Admin & Treasury
   #description
-  Beautiful code blocks with language detection, line numbers, and copy buttons. Support for 100+ languages.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-database
-  ---
-  #title
-  Content Database
-
-  #description
-  Query your content with a MongoDB-like API. Filter, sort, and search through your documentation programmatically.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-file-code
-  ---
-  #title
-  Frontmatter Support
-
-  #description
-  Add metadata to your content files. Define SEO tags, navigation properties, and custom fields.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-git-branch
-  ---
-  #title
-  Version Control
-
-  #description
-  Content lives in your repository. Branch, review, and deploy documentation alongside your code.
+  Control administrativo sobre desembolsos, arbitraje de disputas y auditoría global.
   :::
 ::
 
@@ -245,16 +188,15 @@ Enhanced with Nuxt Content
   :::u-page-c-t-a
   ---
   links:
-    - label: Start building
-      to: '/getting-started'
+    - label: Ver Referencia API
+      to: '/tokenization-api'
       trailingIcon: i-lucide-arrow-right
-    - label: View on GitHub
-      to: 'https://github.com/nuxt-ui-templates/docs'
-      target: _blank
+    - label: Contactar Soporte
+      to: 'mailto:devs@ecosystem.com'
       variant: subtle
-      icon: i-simple-icons-github
-  title: Ready to build an amazing documentation?
-  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
+      icon: i-lucide-mail
+  title: ¿Listo para construir sobre Bitcoin?
+  description: Únete a los desarrolladores que están redefiniendo la propiedad digital. Empieza a integrar hoy mismo.
   class: dark:bg-neutral-950
   ---
 

@@ -56,12 +56,12 @@ export default defineNuxtConfig({
   },
 
   llms: {
-    domain: 'https://docs-template.nuxt.dev/',
-    title: 'Nuxt Docs Template',
-    description: 'A template for building documentation with Nuxt UI and Nuxt Content.',
+    domain: 'https://docs.tokenization-ecosystem.com/',
+    title: 'Tokenization Ecosystem API',
+    description: 'Plataforma integral para la digitalización de activos reales (RWA) sobre Bitcoin y Liquid.',
     full: {
-      title: 'Nuxt Docs Template - Full Documentation',
-      description: 'This is the full documentation for the Nuxt Docs Template.'
+      title: 'Tokenization Ecosystem - Full API Reference',
+      description: 'Documentación técnica completa para la integración de servicios de tokenización, mercado y custodia.'
     },
     sections: [
       {
@@ -76,6 +76,13 @@ export default defineNuxtConfig({
         contentCollection: 'docs',
         contentFilters: [
           { field: 'path', operator: 'LIKE', value: '/essentials%' }
+        ]
+      },
+      {
+        title: 'Tokenization API',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/tokenization-api%' }
         ]
       }
     ]

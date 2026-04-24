@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'green',
+      primary: 'blue',
       neutral: 'slate'
     },
     footer: {
@@ -12,60 +12,47 @@ export default defineAppConfig({
     }
   },
   seo: {
-    siteName: 'Nuxt Docs Template'
+    siteName: 'Tokenization Ecosystem'
   },
   header: {
-    title: '',
+    title: 'Tokenization API',
     to: '/',
     logo: {
-      alt: '',
+      alt: 'Tokenization Ecosystem',
       light: '',
       dark: ''
     },
     search: true,
     colorMode: true,
     links: [{
+      'icon': 'i-lucide-code-xml',
+      'to': '/tokenization-api',
+      'aria-label': 'API Reference'
+    }]
+  },
+  footer: {
+    credits: `Tokenization Ecosystem • Built on Bitcoin & Liquid • © ${new Date().getFullYear()}`,
+    colorMode: false,
+    links: [{
       'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt-ui-templates/docs',
+      'to': 'https://github.com/tokenization-ecosystem',
       'target': '_blank',
       'aria-label': 'GitHub'
     }]
   },
-  footer: {
-    credits: `Built with Nuxt UI • © ${new Date().getFullYear()}`,
-    colorMode: false,
-    links: [{
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://go.nuxt.com/discord',
-      'target': '_blank',
-      'aria-label': 'Nuxt on Discord'
-    }, {
-      'icon': 'i-simple-icons-x',
-      'to': 'https://go.nuxt.com/x',
-      'target': '_blank',
-      'aria-label': 'Nuxt on X'
-    }, {
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub'
-    }]
-  },
   toc: {
-    title: 'Table of Contents',
+    title: 'Contenido',
     bottom: {
-      title: 'Community',
-      edit: 'https://github.com/nuxt-ui-templates/docs/edit/main/content',
+      title: 'Recursos',
+      edit: '',
       links: [{
-        icon: 'i-lucide-star',
-        label: 'Star on GitHub',
-        to: 'https://github.com/nuxt/ui',
-        target: '_blank'
-      }, {
         icon: 'i-lucide-book-open',
-        label: 'Nuxt UI docs',
-        to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',
-        target: '_blank'
+        label: 'Guía de Inicio',
+        to: '/getting-started'
+      }, {
+        icon: 'i-lucide-shield-check',
+        label: 'Seguridad',
+        to: '/tokenization-api/auth'
       }]
     }
   }
