@@ -42,7 +42,7 @@ Documentación técnica, guías y referencia API para construir la próxima gene
   :::prose-pre
   ---
   code: |
-    curl -X POST https://api.ecosystem.com/assets/upload \
+    curl -X POST https://api.plan-b2b-flow.cuboplus.caeher.com/v1/assets/upload \
       -H "Authorization: Bearer <token>" \
       -F "file=@property.pdf" \
       -F "category=real_estate"
@@ -50,7 +50,7 @@ Documentación técnica, guías y referencia API para construir la próxima gene
   ---
 
   ```bash
-  curl -X POST https://api.ecosystem.com/assets/upload \
+  curl -X POST https://api.plan-b2b-flow.cuboplus.caeher.com/v1/assets/upload \
     -H "Authorization: Bearer <token>" \
     -F "file=@property.pdf" \
     -F "category=real_estate"
